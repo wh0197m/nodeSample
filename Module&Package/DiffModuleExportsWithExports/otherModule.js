@@ -3,10 +3,13 @@
  * @Author: wh01am
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
- * @Last Modified Time: Mar 4, 2017 11:55 PM
+ * @Last Modified Time: Mar 5, 2017 12:29 AM
  * @Description: module.exports vs exports
  */
 
+/**
+ * 这里不可以使用箭头函数
+ */
 module.exports = function(name, age) {
     this.name = name;
     this.age = age;
@@ -27,6 +30,7 @@ module.exports = function(name, age) {
  * module.exports = Module
  * exports = Module
  *
+ * 无特殊情况，建议统一使用exports
  */
 exports.otherInfo = function() {
     return (this.name + ' is ' + this.age + ' years old by exports')
