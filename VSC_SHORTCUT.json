@@ -1,0 +1,166 @@
+// wh01am: I had config some shortcuts for VSC same with Sublime
+[{
+        "key": "ctrl+j",
+        "command": "cursorDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "cursorUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "cursorLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "cursorRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+l",
+        "command": "expandLineSelection",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+y",
+        "command": "redo",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+k",
+        "command": "editor.action.deleteLines",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "scrollLineUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "scrollLineDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+cmd+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+cmd+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+a",
+        "command": "editor.action.sortLinesAscending",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "editor.action.sortLinesDescending",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+/",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "workbench.extensions.action.installExtensions"
+    },
+    {
+        "key": "ctrl+alt+e",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+alt+d",
+        "command": "workbench.view.debug"
+    },
+    {
+        "key": "ctrl+alt+g",
+        "command": "workbench.view.git"
+    },
+    {
+        "key": "ctrl+alt+f",
+        "command": "workbench.view.search"
+    },
+    //在当前目录下新建一个文件
+    {
+        "key": "cmd+h w",
+        "command": "explorer.newFile"
+    },
+    //在当前目录下新建一个目录
+    {
+        "key": "cmd+h m",
+        "command": "explorer.newFolder"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.focus"
+    },
+    //向左删除一整句或一个单词
+    {
+        "key": "ctrl+u",
+        "command": "deleteAllLeft",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "deleteWordLeft",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    /**
+     * 使用vim键盘来控制上下左右
+     */
+    // 命令行窗口向下翻动历史命令
+    {
+        "key": "ctrl+j",
+        "command": "repl.action.historyNext",
+        "when": "editorTextFocus && inDebugRepl && onLastDebugReplLine"
+    },
+    // 命令行窗口向上翻动历史命令
+    {
+        "key": "ctrl+k",
+        "command": "repl.action.historyPrevious",
+        "when": "editorTextFocus && inDebugRepl && onFirsteDebugReplLine"
+    },
+    // 显示下一个参数提示
+    {
+        "key": "ctrl+j",
+        "command": "showNextParameterHint",
+        "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+    },
+    // 显示上一个参数提示
+    {
+        "key": "ctrl+k",
+        "command": "showPrevParameterHint",
+        "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+    },
+    // 选择下一个提示
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    // 选择上一个提示
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    }
+]
