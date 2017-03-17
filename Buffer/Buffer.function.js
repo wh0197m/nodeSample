@@ -3,7 +3,7 @@
  * @Author: wh01am
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
- * @Last Modified Time: Mar 15, 2017 10:30 PM
+ * @Last Modified Time: Mar 17, 2017 10:49 PM
  * @Description: Handle Buffer
  */
 
@@ -27,4 +27,8 @@ console.info(`Buffer.isEncoding('utf8') is ${Buffer.isEncoding('utf8')}`);
  * get the byte length of a buffer
  * syntax: Buffer.byteLength()
  */
-console.info(`Buffer.byteLength(a_buffer) is ${Buffer.byteLength('yes', 'utf8')}`)
+console.info(`Buffer.byteLength(a_buffer) is ${Buffer.byteLength('yes', 'utf8')}`);
+let specialString = '\u00bd + \u00bc = \u00be';
+console.info('\\u00bd+\\u00bc=\\u00be means s%', specialString);
+console.info('The Truely Length of specialString is ' + Buffer.byteLength(specialString)); //12个字节长度
+console.info('Not Correct Length of specialString is ' + specialString.length); //9个字符长度，一个字符有时是1个字节，有时候是双字节
