@@ -12,3 +12,12 @@
 * exit事件与close事件
   * 对于exit事件，子进程的标准输入、输出流仍为开启状态
   * 对于close事件，一个子进程的所有标准输入、输出流被终止时出发，因为多进程有时候会共享同一个标准输入、输出流
+* exec和execFile的区别在于，execFile是用来执行文件的，它不用启动独立的shell
+* fork()方法说明
+  * 该方法除了具有普通child_process实例所具有的所有方法外，其所有返回的对象**还具有内置的通讯通道**
+  * 该方法在缺省情况下，**所派生的Node进程的stdout、stderr会关联到父进程**，如果要改变该行为，可将**options对象中的silent属性设置为true**
+  * 该方法创建的子进程运行完成后并不会自动退出，**用户需要明确的调用process.exit()进行退出**
+  * 这些**派生的Node进程是全新的Google V8实例**，假设每个新的Node进程大致需要至少30毫秒的启动时间和10M内存，也就是说用户创建的进程是有限的
+  * Node.js框架虽然自身存在多个线程，但是**运行在Google V8上的Javascript是单线程的**
+  * Node.js框架的child_process模块用于创建子进程，设计人员可以通过子进程充分利用CPU的新能了
+  * fork()方法只能运行Javascript代码，Typescript等任何可以编译到javascript的语言都无法通过fork()方法进行调用
