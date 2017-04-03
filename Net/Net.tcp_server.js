@@ -31,3 +31,14 @@ net.createServer((socket) => {
         console.log('connection was close');
     })
 }).listen(PORT, HOST)
+
+/**
+ * 通过connnection事件创建server的方法
+ */
+
+// let server = net.createServer();
+// server.listen(PORT, HOST);
+// console.info('Server listening on: ' + server.address());
+// server.on('connection', (socket) => {
+//     console.info('CONNECTED: ' + socket.remoteAddress + ':' + socket.remotePort);
+// })
