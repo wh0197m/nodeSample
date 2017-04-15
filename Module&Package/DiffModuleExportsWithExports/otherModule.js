@@ -30,7 +30,7 @@ module.exports = function(name, age) {
  * module.exports = Module
  * exports = Module
  *
- * 无特殊情况，建议统一使用exports
+ * 无特殊情况，建议统一使用module.exports
  */
 exports.otherInfo = function() {
     return (this.name + ' is ' + this.age + ' years old by exports')
